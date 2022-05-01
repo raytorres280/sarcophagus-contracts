@@ -24,6 +24,11 @@ module.exports = {
       }),
       network_id: '5',
     },
+    ganache: {
+      host: "127.0.0.1",
+      port: 7545,
+      network_id: "*" // Match any network id
+    },
   },
   compilers: {
     solc: {

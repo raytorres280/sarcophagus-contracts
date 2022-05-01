@@ -6,7 +6,7 @@ const Sarcophaguses = artifacts.require("Sarcophaguses")
 
 module.exports = async function (deployer, network) {
   let sarcoTokenAddress
-  if (["develop", "test", "soliditycoverage"].includes(network)) {
+  if (["develop", "test", "soliditycoverage", "ganache"].includes(network)) {
     await deployer.deploy(SarcoTokenMock)
     const sarcoTokenMock = await SarcoTokenMock.deployed()
     sarcoTokenAddress = sarcoTokenMock.address
